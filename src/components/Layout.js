@@ -22,7 +22,7 @@ function Layout({ children }) {
         <div className="flex grow px-6 lg:px-40 duration-300">{children}</div>
         <Footer />
       </div>
-      <div className="absolute top-0 bg-gradient-to-b from-white to-white/50 min-h-screen w-full z-10" />
+      <div className="absolute top-0 bg-gradient-to-b from-white to-white/60 h-full w-full z-10" />
       <div className="absolute bottom-0 w-full h-auto z-0">
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2">
           {grid.map((g, index) => (
