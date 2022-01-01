@@ -16,12 +16,12 @@ function Index() {
             Hey, I&apos;m Ardi
             <span className="font-normal">👋🏻</span>
           </p>
-          <p className="font-manrope font-extrabold text-md text-gray-400/70 text-center md:text-left w-72 md:w-96 duration-300">
+          <p className="font-manrope font-extrabold text-md text-gray-600/80 text-center md:text-left w-72 md:w-96 duration-300">
             On my way to becoming a software engineer specialized in frontend
             development.
           </p>
         </div>
-        <p className="font-manrope font-bold text-md text-gray-400/70">
+        <p className="font-manrope font-bold text-md text-gray-600/80">
           Wanna see my past work ? {""}
           <LinkHref body="here" href="/projects" />.
         </p>
