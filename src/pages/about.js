@@ -3,6 +3,8 @@ import LinkHref from "../components/LinkHref";
 import SocialLink from "../components/SocialLink";
 
 function About() {
+  About.title = "About - Ardi";
+
   return (
     <div className="flex flex-col py-6 space-y-6 sm:py-10 sm:space-y-10 w-full">
       <p className="font-fredoka text-3xl sm:text-4xl md:text-5xl text-sky-500/50">

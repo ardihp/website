@@ -1,15 +1,13 @@
 import React from "react";
 import IndexPict from "../../public/index.png";
 import Image from "next/image";
-import Head from "next/head";
 import LinkHref from "../components/LinkHref";
 
 function Index() {
+  Index.title = "Ardi's Personal Website";
+
   return (
     <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 w-full justify-center items-center">
-      <Head>
-        <title>Ardi&apos;s Personal Website</title>
-      </Head>
       <div className="flex flex-col items-center md:items-start space-y-6 md:w-full">
         <div className="flex flex-col items-center md:items-start space-y-3 w-full">
           <p className="font-fredoka text-4xl md:text-5xl text-sky-500/50">
