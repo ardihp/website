@@ -79,15 +79,31 @@ function About() {
               Feel free to get in touch with me via links below:
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-flow-col md:auto-cols-fr gap-4 w-full">
-              <SocialLink href="#" body="Email" icon="far fa-envelope" />
-              <SocialLink href="#" body="LinkedIn" icon="fab fa-linkedin-in" />
-              <SocialLink href="#" body="Github" icon="fab fa-github-alt" />
+              <SocialLink
+                href="mailto:ardihp8@gmail.com"
+                body="Email"
+                icon="far fa-envelope"
+              />
+              <SocialLink
+                href="https://linkedin.com/in/ardi-hp/"
+                body="LinkedIn"
+                icon="fab fa-linkedin-in"
+              />
+              <SocialLink
+                href="https://github.com/ardihp"
+                body="Github"
+                icon="fab fa-github-alt"
+              />
               <SocialLink
                 href="https://medium.com/@ardihp8"
                 body="Medium"
                 icon="fab fa-medium-m"
               />
-              <SocialLink href="#" body="Instagram" icon="fab fa-instagram" />
+              <SocialLink
+                href="https://www.instagram.com/ardi.hp/"
+                body="Instagram"
+                icon="fab fa-instagram"
+              />
             </div>
           </div>
         </div>
