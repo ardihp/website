@@ -12,7 +12,7 @@ function Index() {
         <div className="flex flex-col items-center md:items-start space-y-3 w-full">
           <p className="font-fredoka text-4xl md:text-5xl text-sky-500/50">
             Hey, I&apos;m Ardi
-            <span className="font-normal">👋🏻</span>
+            <i className="fas fa-paw ml-4 transform rotate-12" />
           </p>
           <p className="font-manrope font-extrabold text-md text-gray-600/80 text-center md:text-left w-72 md:w-96 duration-300">
             On my way to becoming a software engineer specialized in frontend
