@@ -1,6 +1,6 @@
 import React from "react";
-import LinkHref from "../components/LinkHref";
-import SocialLink from "../components/SocialLink";
+import LinkHref from "@/components/LinkHref";
+import SocialLink from "@/components/SocialLink";
 
 function About() {
   About.title = "About - Ardi";

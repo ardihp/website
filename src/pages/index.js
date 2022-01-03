@@ -1,7 +1,7 @@
 import React from "react";
-import IndexPict from "../../public/index.png";
 import Image from "next/image";
-import LinkHref from "../components/LinkHref";
+import IndexPict from "@/public/index.png";
+import LinkHref from "@/components/LinkHref";
 
 function Index() {
   Index.title = "Ardi's Personal Website";

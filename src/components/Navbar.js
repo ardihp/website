@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import ActiveLink from "./ActiveLink";
+import ActiveLink from "@/components/ActiveLink";
 import { useTheme } from "next-themes";
 import { Menu, Transition } from "@headlessui/react";
 
