@@ -8,6 +8,7 @@ function MyApp({ Component, pageProps }) {
     <ThemeProvider enableSystem={true} attribute="class">
       <Layout>
         <Head>
+          <meta content="width=device-width, initial-scale=1" name="viewport" />
           <title>{Component.title}</title>
         </Head>
         <Component {...pageProps} />
