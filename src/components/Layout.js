@@ -16,14 +16,16 @@ function Layout({ children }) {
   }, [value, grid]);
 
   return (
-    <div className="flex flex-col max-w-full relative">
-      <div className="flex flex-col relative min-h-screen z-20">
+    <div className="flex flex-col min-h-screen relative">
+      <div className="sticky shadow-lg shadow-sky-200/25 top-0 border-b-2 border-dashed border-sky-200 rounded-b-xl z-50">
         <Navbar />
-        <div className="flex grow px-6 lg:px-40 duration-300">{children}</div>
-        <Footer />
       </div>
-      <div className="absolute top-0 bg-gradient-to-b from-white to-white/60 h-full w-full z-10" />
-      <div className="absolute bottom-0 w-full h-auto z-0">
+      <div className="flex grow justify-center duration-300">
+        <div className="max-w-5xl mx-auto px-6">{children}</div>
+      </div>
+      <Footer />
+      <div className="absolute top-0 bg-gradient-to-b from-white to-white/60 h-full w-full -z-10" />
+      <div className="absolute bottom-0 w-full h-auto -z-20">
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2">
           {grid.map((g, index) => (
             <div
