@@ -3,9 +3,9 @@ import Image from "next/image";
 import IndexPict from "@/public/index.png";
 import LinkHref from "@/components/LinkHref";
 
-function Index() {
-  Index.title = "Ardi's Personal Website";
+Index.title = "Ardi's Personal Website";
 
+function Index() {
   return (
     <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 w-full justify-center items-center">
       <div className="flex flex-col items-center md:items-start space-y-6 md:w-full">
