@@ -6,8 +6,8 @@ About.title = "About - Ardi";
 
 function About() {
   return (
-    <div className="flex flex-col py-6 space-y-6 sm:py-10 sm:space-y-10 w-full">
-      <p className="font-fredoka text-4xl md:text-5xl text-sky-500/50">
+    <div className="flex flex-col py-6 space-y-6 lg:py-10 lg:space-y-6 w-full">
+      <p className="font-fredoka text-4xl lg:text-5xl text-sky-500/50">
         Hey, it&apos;s a nice to meet you here {""}
         <span className="font-normal">⛄️</span>
       </p>
