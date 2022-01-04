@@ -46,7 +46,7 @@ function Header() {
   };
 
   return (
-    <div className="flex max-w-5xl mx-auto justify-between items-center bg-white/80 backdrop-blur-sm py-4 px-6 duration-300">
+    <div className="flex max-w-5xl mx-auto justify-between items-center py-4 px-6 duration-300">
       <Link href="/" passHref>
         <div className="flex items-center text-sky-500/50 cursor-pointer hover:animate-pulse">
           <i className="fas fa-hat-wizard text-xl mr-1" />
