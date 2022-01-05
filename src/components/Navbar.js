@@ -72,7 +72,7 @@ function Header() {
                 leaveTo="transform opacity-0 scale-95 -translate-y-5"
               >
                 <Menu.Items
-                  className="flex flex-col items-center bg-white/90 p-4 sm:p-0 border-2 sm:border-0 border-dashed border-sky-300/50 rounded-xl sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 divide-y sm:divide-y-0 sm:divide-x"
+                  className="flex flex-col items-center bg-white/90 sm:bg-transparent p-4 sm:p-0 border-2 sm:border-0 border-dashed border-sky-300/50 rounded-xl sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 divide-y sm:divide-y-0 sm:divide-x"
                   static
                 >
                   <div className="flex flex-col items-center space-y-2 sm:space-y-0 sm:flex-row sm:space-x-6 text-sm font-manrope font-bold w-full">
