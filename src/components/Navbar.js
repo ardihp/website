@@ -1,49 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import ActiveLink from "@/components/ActiveLink";
-import { useTheme } from "next-themes";
 import { Menu, Transition } from "@headlessui/react";
+import ThemeChanger from "./ThemeChanger";
 
 function Header() {
-  const { systemTheme, theme, setTheme } = useTheme();
   const [windowWidth, setWindowWidth] = useState();
-  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    setLoaded(true);
     setWindowWidth(window.screen.width);
   }, [windowWidth]);
-
-  const renderThemeChanger = () => {
-    if (!loaded) return;
-    const currentTheme = theme === "system" ? systemTheme : theme;
-
-    if (currentTheme === "dark") {
-      return (
-        <Menu.Item>
-          <button
-            type="button"
-            onClick={() => setTheme("light")}
-            className="w-9 h-9 text-gray-400 hover:text-opacity-50 rounded-full duration-150"
-          >
-            <i className="fas fa-sun text-lg" />
-          </button>
-        </Menu.Item>
-      );
-    } else {
-      return (
-        <Menu.Item>
-          <button
-            type="button"
-            onClick={() => setTheme("dark")}
-            className="w-9 h-9 text-gray-400 hover:text-opacity-50 rounded-full duration-150"
-          >
-            <i className="fas fa-moon text-lg" />
-          </button>
-        </Menu.Item>
-      );
-    }
-  };
 
   return (
     <div className="flex max-w-5xl mx-auto justify-between items-center py-4 px-6 duration-300">
@@ -92,7 +58,7 @@ function Header() {
                     </Menu.Item>
                   </div>
                   <div className="flex space-x-4 sm:pl-6 justify-between items-center pt-4 sm:pt-0 w-full">
-                    {renderThemeChanger()}
+                    <ThemeChanger />
                     <div className="flex items-center justify-center w-9 h-9 text-gray-400 hover:text-opacity-50 rounded-full duration-300">
                       <Menu.Item>
                         <a
