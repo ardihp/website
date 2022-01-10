@@ -23,9 +23,16 @@ function Projects() {
             key={p.title}
             className="flex flex-col h-full border-2 p-3 border-dashed border-gray-300/30 rounded-lg bg-white/10 backdrop-blur-sm relative"
           >
-            <div className="flex lg:h-52 bg-gray-50 rounded-lg overflow-hidden mb-2">
-              <div className="h-40 min-h-full w-full">
-                <Image src={p.image} alt={p.title} placeholder="blur" />
+            <div className="flex bg-gray-50 rounded-lg overflow-hidden mb-2">
+              <div className="w-full">
+                <Image
+                  src={p.image}
+                  alt={p.title}
+                  placeholder="blur"
+                  layout="responsive"
+                  width="712"
+                  height="360"
+                />
               </div>
             </div>
             <div className="flex items-center justify-between text-gray-600/60 mb-1">
