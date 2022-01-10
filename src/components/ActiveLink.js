@@ -9,7 +9,7 @@ function ActiveLink({ children, href, ...rest }) {
       <a
         {...rest}
         className={`${
-          router.asPath === href
+          router.asPath.match(href)
             ? "text-white bg-sky-500/50"
             : "text-gray-400 hover:bg-gray-300/10"
         } duration-300 py-2 px-3 rounded-lg w-full text-center`}
