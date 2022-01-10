@@ -1,6 +1,9 @@
 import React from "react";
+import { getBlog } from "@/lib/getBlog";
 
-function Blog() {
+function Blog({ blogs }) {
+  console.log(blogs);
+
   return (
     <div>
       <p>ini halaman blog</p>
@@ -9,3 +12,13 @@ function Blog() {
 }
 
 export default Blog;
+
+export async function getStaticProps() {
+  const blogs = await getBlog();
+
+  return {
+    props: {
+      blogs,
+    },
+  };
+}
