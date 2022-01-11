@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Korean";
+  src: url(/font/BinggraeSamanco.woff2) format("woff2");
+}

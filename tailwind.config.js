@@ -5,6 +5,7 @@ module.exports = {
     fontFamily: {
       fredoka: "Fredoka One, cursive",
       manrope: "Manrope, sans-serif",
+      korean: "Korean",
     },
     extend: {},
   },
