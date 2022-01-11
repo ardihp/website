@@ -14,9 +14,8 @@ function Header() {
   return (
     <div className="flex max-w-5xl mx-auto justify-between items-center py-4 px-6 duration-300">
       <Link href="/" passHref>
-        <div className="flex items-center text-sky-500/50 cursor-pointer hover:animate-pulse">
-          <i className="fas fa-hat-wizard text-xl mr-1" />
-          <p className="font-fredoka text-2xl tracking-widest">rdi</p>
+        <div className="flex w-28 items-center text-sky-500/50 cursor-pointer hover:animate-pulse">
+          <p className="font-korean text-4xl font-bold">아르디</p>
         </div>
       </Link>
       <Menu as="div" className="flex relative w-full justify-end">
