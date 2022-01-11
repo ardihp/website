@@ -11,7 +11,10 @@ function Index() {
       <div className="flex flex-col items-center md:items-start space-y-6 md:w-full">
         <div className="flex flex-col items-center md:items-start space-y-3 w-full">
           <p className="font-fredoka text-4xl md:text-5xl text-sky-500/50">
-            Hey, I&apos;m Ardi
+            <span className="bg-sky-500/50 rounded-md text-white mr-2 px-2 tracking-wider">
+              Hai
+            </span>
+            , I&apos;m Ardi
             <i className="fas fa-paw ml-4 transform rotate-12" />
           </p>
           <p className="font-manrope font-extrabold text-md text-gray-600/80 text-center md:text-left w-72 md:w-96 duration-300">
