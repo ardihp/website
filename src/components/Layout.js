@@ -7,7 +7,7 @@ function Layout({ children }) {
   const [grid, setGrid] = useState([]);
 
   useEffect(() => {
-    if (value < 30) {
+    if (value < 20) {
       setGrid([...grid, grid]);
       setValue(value + 1);
     } else {
@@ -24,9 +24,9 @@ function Layout({ children }) {
         <div className="flex max-w-5xl mx-auto px-6 w-full">{children}</div>
       </div>
       <Footer />
-      <div className="absolute top-0 bg-gradient-to-b from-white to-white/60 h-full w-full -z-10" />
-      <div className="absolute bottom-0 w-full h-auto -z-20">
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2">
+      <div className="fixed top-0 bg-gradient-to-b from-white to-white/60 h-full w-full -z-10" />
+      <div className="fixed top-0 w-full max-h-screen -z-20 overflow-hidden">
+        <div className="grid grid-cols-2">
           {grid.map((g, index) => (
             <div
               key={index}
