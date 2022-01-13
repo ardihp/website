@@ -4,7 +4,7 @@ import { getBlogbySlug, getSlug } from "@/lib/getBlog";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import Link from "next/link";
-import { H2 } from "@/components/MDXComponent";
+import { H2, Images, Paragraph } from "@/components/MDXComponent";
 
 function BlogPage({ body: { title, date, excerpt }, mdxSource }) {
   const [toc, setToc] = useState([]);
@@ -43,8 +43,11 @@ function BlogPage({ body: { title, date, excerpt }, mdxSource }) {
           </p>
           <p className="font-manrope font-bold text-gray-600/70">{excerpt}</p>
         </div>
-        <div className="prose prose-p:font-manrope prose-p:font-bold prose-p:text-gray-600/70 prose-hr:mb-6 prose: prose-h2:font-fredoka prose-h2:font-normal prose-zinc dark:prose-invert max-w-none">
-          <MDXRemote {...mdxSource} components={{ h2: H2 }} />
+        <div className="prose prose-hr:mb-6 prose-hr:mt-0 prose-zinc dark:prose-invert max-w-none">
+          <MDXRemote
+            {...mdxSource}
+            components={{ p: Paragraph, h2: H2, img: Images }}
+          />
         </div>
       </div>
       <div className="hidden lg:block lg:w-3/12 relative pl-4">
