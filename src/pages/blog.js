@@ -3,7 +3,7 @@ import { getBlog } from "@/lib/getBlog";
 import BlogCard from "@/components/BlogCard";
 
 Blog.title = "Blog's - Ardi";
-function Blog({ blogs }) {
+function Blog({ posts }) {
   return (
     <div className="flex flex-col py-6 space-y-6 w-full">
       <div className="flex flex-col space-y-2">
@@ -15,7 +15,7 @@ function Blog({ blogs }) {
         </p>
       </div>
       <div className="grid md:grid-cols-2 gap-6">
-        {blogs.map((blog, i) => (
+        {posts.map((blog, i) => (
           <BlogCard key={i} {...blog} />
         ))}
       </div>
@@ -28,9 +28,13 @@ export default Blog;
 export async function getStaticProps() {
   const blogs = await getBlog();
 
+  const posts = blogs.sort(
+    (a, b) => new Date(b.body.date) - new Date(a.body.date)
+  );
+
   return {
     props: {
-      blogs,
+      posts,
     },
   };
 }
