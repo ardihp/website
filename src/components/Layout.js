@@ -16,7 +16,7 @@ function Layout({ children }) {
   }, [value, grid]);
 
   return (
-    <div className="flex flex-col min-h-screen relative">
+    <div className="flex flex-col min-h-screen max-h-full relative">
       <div className="sticky shadow-lg bg-white/95 backdrop-blur-sm shadow-sky-200/25 top-0 border-b-2 border-dashed border-sky-200 rounded-b-xl z-50">
         <Navbar />
       </div>
