@@ -41,11 +41,6 @@ function Header() {
                   static
                 >
                   <div className="flex flex-col items-center space-y-2 sm:space-y-0 sm:flex-row sm:space-x-6 text-sm font-manrope font-bold w-full">
-                    {windowWidth < 640 && (
-                      <Menu.Item>
-                        <ActiveLink href="/">Home</ActiveLink>
-                      </Menu.Item>
-                    )}
                     <Menu.Item>
                       <ActiveLink href="/blog">Blog</ActiveLink>
                     </Menu.Item>
