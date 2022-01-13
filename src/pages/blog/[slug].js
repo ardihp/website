@@ -1,29 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Head from "next/head";
+import Image from "next/image";
+import AuthorImage from "@/public/author.png";
 import { getBlogbySlug, getSlug } from "@/lib/getBlog";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
-import Link from "next/link";
 import { H2, Images, Paragraph } from "@/components/MDXComponent";
 
 function BlogPage({ body: { title, date, excerpt }, mdxSource }) {
-  const [toc, setToc] = useState([]);
-
-  useEffect(() => {
-    const links = document.querySelectorAll("h2");
-
-    const listLink = [];
-
-    links.forEach((link) => {
-      const id = link.id;
-      const text = link.textContent;
-
-      listLink.push({ id: id, content: text });
-    });
-
-    setToc(listLink);
-  }, []);
-
   return (
     <div className="flex space-x-8 pt-8 pb-6 w-full">
       <Head>
@@ -50,21 +34,15 @@ function BlogPage({ body: { title, date, excerpt }, mdxSource }) {
           />
         </div>
       </div>
-      <div className="hidden lg:block lg:w-3/12 relative pl-4">
+      <div className="hidden lg:block lg:w-3/12 relative pl-10">
         <div className="sticky top-28">
-          <div className="flex flex-col space-y-4">
-            <p className="font-manrope font-bold text-sm">On this blog</p>
-            <ul className="flex flex-col">
-              {toc.map((link) => (
-                <li key={link.id} className="flex">
-                  <Link href={`#${link.id}`}>
-                    <a className="font-manrope text-sm font-bold text-gray-600/60 py-1">
-                      {link.content}
-                    </a>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          <div className="flex flex-col space-y-3 border border-dashed pb-5 rounded-lg">
+            <Image src={AuthorImage} alt="gambar author" placeholder="blur" />
+            <div className="flex justify-center">
+              <p className="bg-sky-500/40 rounded-full px-3 py-1 font-manrope font-bold text-xs text-white">
+                Authored by myself :)
+              </p>
+            </div>
           </div>
         </div>
       </div>
