@@ -6,3 +6,11 @@
   font-family: "Korean";
   src: url(/font/BinggraeSamanco.woff2) format("woff2");
 }
+
+html {
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+}
