@@ -55,7 +55,7 @@ function BlogPage({ body: { title, date, excerpt }, mdxSource }) {
               {toc.map((link) => (
                 <li key={link.id} className="flex">
                   <Link href={`#${link.id}`}>
-                    <a className="font-manrope text-sm font-bold text-gray-600/60 focus-visible:text-red-300 py-1">
+                    <a className="font-manrope text-sm font-bold text-gray-600/60 py-1">
                       {link.content}
                     </a>
                   </Link>
