@@ -14,7 +14,7 @@ function Header() {
   return (
     <div className="flex max-w-5xl mx-auto justify-between items-center py-4 px-6 duration-300">
       <Link href="/" passHref>
-        <div className="flex w-28 items-center text-sky-500/50 cursor-pointer hover:animate-pulse">
+        <div className="flex w-28 items-center dark:text-white text-sky-500/50 cursor-pointer hover:animate-pulse">
           <p className="font-korean text-4xl font-bold">아르디</p>
         </div>
       </Link>
@@ -22,7 +22,7 @@ function Header() {
         {({ open }) => (
           <>
             <div className="sm:hidden">
-              <Menu.Button className="flex items-center justify-center w-9 h-9 hover:bg-sky-300/50 rounded-full text-sky-300 hover:text-white duration-300">
+              <Menu.Button className="flex items-center justify-center w-9 h-9 dark:hover:bg-sky-500/30 hover:bg-sky-300/50 rounded-full dark:text-white text-sky-300 hover:text-white duration-300">
                 <i className="fas fa-bars text-lg" />
               </Menu.Button>
             </div>
@@ -37,7 +37,7 @@ function Header() {
                 leaveTo="transform opacity-0 scale-95 -translate-y-5"
               >
                 <Menu.Items
-                  className="flex flex-col items-center bg-white/90 sm:bg-transparent p-4 sm:p-0 border-2 sm:border-0 border-dashed border-sky-300/50 rounded-xl sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 divide-y sm:divide-y-0 sm:divide-x"
+                  className="flex flex-col items-center dark:bg-slate-900/90 bg-white/90 sm:bg-transparent p-4 sm:p-0 border-2 sm:border-0 border-dashed dark:border-slate-400 border-sky-300/50 rounded-xl sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 divide-y sm:divide-y-0 sm:divide-x"
                   static
                 >
                   <div className="flex flex-col items-center space-y-2 sm:space-y-0 sm:flex-row sm:space-x-6 text-sm font-manrope font-bold w-full">
@@ -53,7 +53,7 @@ function Header() {
                   </div>
                   <div className="flex space-x-4 sm:pl-6 justify-between items-center pt-4 sm:pt-0 w-full">
                     <ThemeChanger />
-                    <div className="flex items-center justify-center w-9 h-9 text-gray-400 hover:text-opacity-50 rounded-full duration-300">
+                    <div className="flex items-center justify-center w-9 h-9 dark:text-white text-gray-400 dark:hover:text-opacity-50 hover:text-opacity-50 rounded-full duration-300">
                       <Menu.Item>
                         <a
                           href="https://github.com/ardihp/website"
