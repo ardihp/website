@@ -7,7 +7,7 @@ function Layout({ children }) {
   const [grid, setGrid] = useState([]);
 
   useEffect(() => {
-    if (value < 20) {
+    if (value < 30) {
       setGrid([...grid, grid]);
       setValue(value + 1);
     } else {
