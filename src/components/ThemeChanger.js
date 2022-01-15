@@ -20,7 +20,7 @@ function ThemeChanger() {
           <button
             type="button"
             onClick={() => setTheme("light")}
-            className="w-9 h-9 text-gray-400 hover:text-opacity-50 rounded-full duration-150"
+            className="w-9 h-9 dark:text-white dark:hover:text-opacity-50 text-gray-400 hover:text-opacity-50 rounded-full duration-150"
           >
             <i className="fas fa-sun text-lg" />
           </button>
@@ -32,7 +32,7 @@ function ThemeChanger() {
           <button
             type="button"
             onClick={() => setTheme("dark")}
-            className="w-9 h-9 text-gray-400 hover:text-opacity-50 rounded-full duration-150"
+            className="w-9 h-9 dark:text-white dark:hover:text-opacity-50 text-gray-400 hover:text-opacity-50 rounded-full duration-150"
           >
             <i className="fas fa-moon text-lg" />
           </button>
