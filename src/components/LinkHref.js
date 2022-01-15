@@ -7,7 +7,7 @@ function LinkHref({ href, target, body }) {
       <a
         target={target}
         rel="noreferrer"
-        className="text-sky-500/70 underline underline-offset-2"
+        className="dark:text-sky-400 text-sky-500/70 underline underline-offset-2"
       >
         {body}
       </a>
