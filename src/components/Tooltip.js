@@ -5,7 +5,7 @@ function Tooltip({ content, children }) {
   return (
     <TippyTooltip
       html={
-        <div className="flex space-x-1 items-center px-2 py-1 mb-2 text-gray-600 bg-white border rounded-md shadow-md dark:bg-dark dark:text-gray-200">
+        <div className="flex space-x-1 items-center px-2 h-8 mb-2 dark:text-slate-200 text-gray-600 dark:bg-slate-800 bg-white border dark:border-slate-600 rounded-md shadow-md">
           <p className="font-manrope font-bold text-xs">{content}</p>
           <i className="fas fa-angle-right text-sm" />
         </div>
