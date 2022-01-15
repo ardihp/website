@@ -7,7 +7,7 @@ function SocialLink({ icon, body, href }) {
       <a
         target="_blank"
         rel="noreferrer"
-        className="flex items-center justify-center text-sm text-white bg-sky-500/50 space-x-2 duration-300 p-3 rounded-lg transform shadow-lg shadow-sky-400/30 hover:-translate-y-1"
+        className="flex items-center justify-center text-sm h-12 text-white dark:bg-sky-500/20 dark:hover:bg-sky-500/30 bg-sky-500/50 hover:bg-sky-500/60 dark:border border-dashed dark:border-sky-300/70 space-x-2 duration-300 rounded-lg shadow-lg shadow-sky-400/40 dark:shadow-sky-500/25"
       >
         <i className={icon} />
         <p className="font-manrope font-bold">{body}</p>
