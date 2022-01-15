@@ -14,18 +14,18 @@ function BlogPage({ body: { title, date, excerpt }, mdxSource }) {
         <title>{title} - Blog&apos;s Ardi</title>
       </Head>
       <div className="flex flex-col space-y-4 w-full lg:w-9/12">
-        <div className="flex justify-between items-center">
-          <div className="flex bg-sky-500/50 rounded-full items-center justify-center">
-            <p className="font-manrope font-bold text-white text-xs py-1 px-3">
-              {date}
-            </p>
+        <div>
+          <div className="inline-flex dark:bg-slate-700/60 bg-sky-500/50 h-8 px-4 rounded-full items-center">
+            <p className="font-manrope font-bold text-white text-xs">{date}</p>
           </div>
         </div>
         <div className="flex flex-col space-y-2">
-          <p className="font-fredoka text-4xl lg:text-5xl text-sky-500/50">
+          <p className="font-fredoka text-4xl lg:text-5xl dark:text-slate-200 text-sky-500/50">
             {title}
           </p>
-          <p className="font-manrope font-bold text-gray-600/70">{excerpt}</p>
+          <p className="font-manrope font-bold dark:text-slate-400 text-gray-600/70">
+            {excerpt}
+          </p>
         </div>
         <div className="prose prose-hr:mb-6 prose-hr:mt-0 prose-zinc dark:prose-invert max-w-none">
           <MDXRemote
@@ -36,10 +36,10 @@ function BlogPage({ body: { title, date, excerpt }, mdxSource }) {
       </div>
       <div className="hidden lg:block lg:w-3/12 relative pl-10">
         <div className="sticky top-28">
-          <div className="flex flex-col space-y-3 border border-dashed pb-5 rounded-lg">
+          <div className="flex flex-col space-y-3 border-2 border-dashed dark:border-sky-400/40 dark:bg-sky-500/5 pb-5 rounded-lg">
             <Image src={AuthorImage} alt="gambar author" placeholder="blur" />
-            <div className="flex justify-center">
-              <p className="bg-sky-500/40 rounded-full px-3 py-1 font-manrope font-bold text-xs text-white">
+            <div className="flex items-center justify-center dark:bg-slate-700/60 bg-sky-500/40 rounded-full h-8 mx-5">
+              <p className="font-manrope font-bold text-xs text-white">
                 Authored by myself :)
               </p>
             </div>
