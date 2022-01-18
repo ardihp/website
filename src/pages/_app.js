@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import Layout from "@/components/Layout";
 import { ThemeProvider } from "next-themes";
 import Head from "next/head";
+import Progress from "@/components/Progress";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps }) {
           <title>{Component.title}</title>
         </Head>
         <Component {...pageProps} />
+        <Progress />
       </Layout>
     </ThemeProvider>
   );
