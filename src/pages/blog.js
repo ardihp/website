@@ -1,22 +1,33 @@
 import React from "react";
 import { getBlog } from "@/lib/getBlog";
 import BlogCard from "@/components/BlogCard";
+import { motion } from "framer-motion";
 
 Blog.title = "Blog's - Ardi";
 function Blog({ posts }) {
   return (
     <div className="flex flex-col py-6 space-y-6 w-full">
       <div className="flex flex-col space-y-2">
-        <p className="font-fredoka text-4xl lg:text-5xl dark:text-white text-sky-500/50">
+        <motion.p
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.4 }}
+          className="font-fredoka text-4xl lg:text-5xl dark:text-white text-sky-500/50"
+        >
           Blogs
-        </p>
-        <p className="font-manrope font-bold dark:text-slate-400 text-gray-600/70">
+        </motion.p>
+        <motion.p
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.55 }}
+          className="font-manrope font-bold dark:text-slate-400 text-gray-600/70"
+        >
           Place for me to share something using words.
-        </p>
+        </motion.p>
       </div>
       <div className="grid md:grid-cols-2 gap-6">
         {posts.map((blog, i) => (
-          <BlogCard key={i} {...blog} />
+          <BlogCard key={i} idx={i} {...blog} />
         ))}
       </div>
     </div>
