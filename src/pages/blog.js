@@ -11,7 +11,7 @@ function Blog({ posts }) {
         <motion.p
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.3 }}
           className="font-fredoka text-4xl lg:text-5xl dark:text-white text-sky-500/50"
         >
           Blogs
@@ -19,7 +19,7 @@ function Blog({ posts }) {
         <motion.p
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.55 }}
+          transition={{ duration: 0.3, delay: 0.15 }}
           className="font-manrope font-bold dark:text-slate-400 text-gray-600/70"
         >
           Place for me to share something using words.

@@ -22,7 +22,7 @@ function About() {
         <motion.p
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.4, delay: 0.15 }}
+          transition={{ duration: 0.3, delay: 0.15 }}
           className="font-fredoka text-xl md:text-2xl dark:text-slate-200 text-sky-500/50"
         >
           About Me
@@ -32,7 +32,7 @@ function About() {
             <motion.p
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.3 }}
+              transition={{ duration: 0.3, delay: 0.3 }}
             >
               My name is{" "}
               <span className="dark:text-slate-200 text-gray-800">
@@ -67,7 +67,7 @@ function About() {
             <motion.p
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.45 }}
+              transition={{ duration: 0.3, delay: 0.45 }}
             >
               I like things related to{" "}
               <span className="dark:text-slate-200 text-gray-800">
@@ -105,7 +105,7 @@ function About() {
             <motion.p
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.6 }}
+              transition={{ duration: 0.3, delay: 0.6 }}
               className="font-manrope font-bold dark:text-slate-200 text-gray-600/70"
             >
               Feel free to get in touch with me via links below:

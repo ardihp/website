@@ -8,9 +8,9 @@ function BlogCard({ slug, body, idx }) {
 
   return (
     <motion.div
-      initial={{ y: 30, opacity: 0 }}
+      initial={{ y: 20, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.65, delay: idx * 0.1 }}
+      transition={{ duration: 0.3, delay: 0.3 + 0.15 * idx }}
       viewport={{ once: true }}
       className="flex"
     >

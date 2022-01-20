@@ -7,7 +7,7 @@ function SocialLink({ icon, body, href, idx }) {
     <motion.div
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.4, delay: 0.75 + 0.1 * idx }}
+      transition={{ duration: 0.3, delay: 0.75 + 0.1 * idx }}
     >
       <Link href={href}>
         <a
