@@ -6,6 +6,7 @@ import { getBlogbySlug, getSlug } from "@/lib/getBlog";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import { H2, Images, Paragraph } from "@/components/MDXComponent";
+import { motion } from "framer-motion";
 
 function BlogPage({ body: { title, date, excerpt }, mdxSource }) {
   return (
@@ -14,27 +15,46 @@ function BlogPage({ body: { title, date, excerpt }, mdxSource }) {
         <title>{title} - Blog&apos;s Ardi</title>
       </Head>
       <div className="flex flex-col space-y-4 w-full lg:w-9/12">
-        <div>
+        <motion.div
+          animate={{ opacity: [0, 1], y: [20, 0] }}
+          transition={{ duration: 0.3 }}
+        >
           <div className="inline-flex dark:bg-slate-700/60 bg-sky-500/50 h-8 px-4 rounded-full items-center">
             <p className="font-manrope font-bold text-white text-xs">{date}</p>
           </div>
-        </div>
+        </motion.div>
         <div className="flex flex-col space-y-2">
-          <p className="font-fredoka text-4xl lg:text-5xl dark:text-slate-200 text-sky-500/50">
+          <motion.p
+            animate={{ opacity: [0, 1], y: [20, 0] }}
+            transition={{ duration: 0.3, delay: 0.15 }}
+            className="font-fredoka text-4xl lg:text-5xl dark:text-slate-200 text-sky-500/50"
+          >
             {title}
-          </p>
-          <p className="font-manrope font-bold dark:text-slate-400 text-gray-600/70">
+          </motion.p>
+          <motion.p
+            animate={{ opacity: [0, 1], y: [20, 0] }}
+            transition={{ duration: 0.3, delay: 0.3 }}
+            className="font-manrope font-bold dark:text-slate-400 text-gray-600/70"
+          >
             {excerpt}
-          </p>
+          </motion.p>
         </div>
-        <div className="prose prose-hr:mb-6 prose-hr:mt-0 prose-zinc dark:prose-invert max-w-none">
+        <motion.div
+          animate={{ opacity: [0, 1], y: [20, 0] }}
+          transition={{ duration: 0.3, delay: 0.45 }}
+          className="prose prose-hr:mb-6 prose-hr:mt-0 prose-zinc dark:prose-invert max-w-none"
+        >
           <MDXRemote
             {...mdxSource}
             components={{ p: Paragraph, h2: H2, img: Images }}
           />
-        </div>
+        </motion.div>
       </div>
-      <div className="hidden lg:block lg:w-3/12 relative pl-10">
+      <motion.div
+        animate={{ opacity: [0, 1], y: [-50, 0] }}
+        transition={{ duration: 0.6 }}
+        className="hidden lg:block lg:w-3/12 relative pl-10"
+      >
         <div className="sticky top-28">
           <div className="flex flex-col space-y-3 border-2 border-dashed dark:border-sky-400/40 dark:bg-sky-500/5 pb-5 rounded-lg">
             <Image src={AuthorImage} alt="gambar author" placeholder="blur" />
@@ -45,7 +65,7 @@ function BlogPage({ body: { title, date, excerpt }, mdxSource }) {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
