@@ -1,23 +1,39 @@
 import React from "react";
 import LinkHref from "@/components/LinkHref";
 import SocialLink from "@/components/SocialLink";
+import social from "@/data/social";
+import { motion } from "framer-motion";
 
 About.title = "About - Ardi";
 
 function About() {
   return (
     <div className="flex flex-col py-6 space-y-6 lg:space-y-8 w-full">
-      <p className="font-fredoka text-4xl lg:text-5xl sm:w-2/3 md:w-7/12 dark:text-slate-200 text-sky-500/50">
+      <motion.p
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.4 }}
+        className="font-fredoka text-4xl lg:text-5xl sm:w-2/3 md:w-7/12 dark:text-slate-200 text-sky-500/50"
+      >
         Hey, it&apos;s a nice to meet you here {""}
         <span className="font-normal">⛄️</span>
-      </p>
+      </motion.p>
       <div className="flex flex-col space-y-3">
-        <p className="font-fredoka text-xl md:text-2xl dark:text-slate-200 text-sky-500/50">
+        <motion.p
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.4, delay: 0.15 }}
+          className="font-fredoka text-xl md:text-2xl dark:text-slate-200 text-sky-500/50"
+        >
           About Me
-        </p>
+        </motion.p>
         <div className="flex flex-col space-y-6">
           <div className="font-manrope font-bold dark:text-slate-400 text-gray-600/70 space-y-3 leading-loose">
-            <p>
+            <motion.p
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.3 }}
+            >
               My name is{" "}
               <span className="dark:text-slate-200 text-gray-800">
                 Ardiansyah Halim Putra
@@ -47,8 +63,12 @@ function About() {
                 Software Engineering
               </span>{" "}
               last year, 2021.
-            </p>
-            <p>
+            </motion.p>
+            <motion.p
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.45 }}
+            >
               I like things related to{" "}
               <span className="dark:text-slate-200 text-gray-800">
                 design and technology
@@ -79,38 +99,27 @@ function About() {
                 target="_blank"
               />
               .
-            </p>
+            </motion.p>
           </div>
           <div className="flex flex-col space-y-4">
-            <p className="font-manrope font-bold dark:text-slate-200 text-gray-600/70">
+            <motion.p
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.6 }}
+              className="font-manrope font-bold dark:text-slate-200 text-gray-600/70"
+            >
               Feel free to get in touch with me via links below:
-            </p>
+            </motion.p>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-flow-col md:auto-cols-fr gap-4 w-full">
-              <SocialLink
-                href="mailto:ardihp8@gmail.com"
-                body="Email"
-                icon="far fa-envelope"
-              />
-              <SocialLink
-                href="https://linkedin.com/in/ardi-hp/"
-                body="LinkedIn"
-                icon="fab fa-linkedin-in"
-              />
-              <SocialLink
-                href="https://github.com/ardihp"
-                body="Github"
-                icon="fab fa-github-alt"
-              />
-              <SocialLink
-                href="https://medium.com/@ardihp8"
-                body="Medium"
-                icon="fab fa-medium-m"
-              />
-              <SocialLink
-                href="https://www.instagram.com/ardi.hp/"
-                body="Instagram"
-                icon="fab fa-instagram"
-              />
+              {social.map((scl, i) => (
+                <SocialLink
+                  icon={scl.icon}
+                  body={scl.body}
+                  href={scl.href}
+                  idx={i}
+                  key={i}
+                />
+              ))}
             </div>
           </div>
         </div>
