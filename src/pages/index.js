@@ -7,7 +7,7 @@ Index.title = "Ardi's Personal Website";
 
 function Index() {
   return (
-    <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 w-full justify-center items-center">
+    <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 w-full py-8 justify-center items-center">
       <div className="flex flex-col items-center lg:items-start space-y-8 md:w-full duration-300">
         <div className="flex flex-col items-center lg:items-start space-y-3 w-full">
           <p className="font-fredoka text-4xl sm:text-5xl dark:text-white text-sky-500/50">
