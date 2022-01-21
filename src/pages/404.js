@@ -5,6 +5,8 @@ import Image404 from "@/public/404.png";
 import { motion } from "framer-motion";
 
 Page404.title = "Whoops, Destination Not Found!";
+Page404.route = "404";
+
 function Page404() {
   return (
     <div className="flex flex-col lg:flex-row-reverse space-y-10 lg:space-y-0 py-6 w-full justify-center items-center">
@@ -12,6 +14,7 @@ function Page404() {
         <div className="flex flex-col items-center lg:items-start w-full font-fredoka space-y-1 text-4xl md:text-5xl dark:text-slate-200 text-sky-500/50">
           <motion.div
             animate={{ opacity: [0, 1], y: [20, 0] }}
+            exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.3 }}
             className="flex items-center space-x-4"
           >
@@ -22,6 +25,7 @@ function Page404() {
           </motion.div>
           <motion.p
             animate={{ opacity: [0, 1], y: [20, 0] }}
+            exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.3, delay: 0.15 }}
           >
             You Can See Here!
@@ -29,6 +33,7 @@ function Page404() {
         </div>
         <motion.div
           animate={{ opacity: [0, 1], y: [20, 0] }}
+          exit={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.3, delay: 0.3 }}
         >
           <Link href="/">
@@ -41,7 +46,8 @@ function Page404() {
       </div>
       <div className="flex justify-center overflow-hidden items-center rounded-full duration-300 lg:w-2/4">
         <motion.div
-          animate={{ opacity: [0, 1] }}
+          animate={{ opacity: [0, 1], x: [20, 0] }}
+          exit={{ opacity: 0, x: 20 }}
           transition={{ duration: 0.6 }}
           className="w-72 lg:w-full"
         >
