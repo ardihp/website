@@ -4,6 +4,8 @@ import BlogCard from "@/components/BlogCard";
 import { motion } from "framer-motion";
 
 Blog.title = "Blog's - Ardi";
+Blog.route = "blog";
+
 function Blog({ posts }) {
   return (
     <div className="flex flex-col py-6 space-y-6 w-full">
@@ -11,6 +13,7 @@ function Blog({ posts }) {
         <motion.p
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 20, opacity: 0 }}
           transition={{ duration: 0.3 }}
           className="font-fredoka text-4xl lg:text-5xl dark:text-white text-sky-500/50"
         >
@@ -19,6 +22,7 @@ function Blog({ posts }) {
         <motion.p
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 20, opacity: 0 }}
           transition={{ duration: 0.3, delay: 0.15 }}
           className="font-manrope font-bold dark:text-slate-400 text-gray-600/70"
         >

@@ -10,6 +10,7 @@ function BlogCard({ slug, body, idx }) {
     <motion.div
       initial={{ y: 20, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
+      exit={{ y: 20, opacity: 0 }}
       transition={{ duration: 0.3, delay: 0.3 + 0.15 * idx }}
       viewport={{ once: true }}
       className="flex"
