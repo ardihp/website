@@ -3,6 +3,7 @@ import Layout from "@/components/Layout";
 import { ThemeProvider } from "next-themes";
 import Head from "next/head";
 import Progress from "@/components/Progress";
+import { AnimatePresence } from "framer-motion";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -12,7 +13,9 @@ function MyApp({ Component, pageProps }) {
           <meta content="width=device-width, initial-scale=1" name="viewport" />
           <title>{Component.title}</title>
         </Head>
-        <Component {...pageProps} />
+        <AnimatePresence exitBeforeEnter>
+          <Component {...pageProps} key={Component.route} />
+        </AnimatePresence>
         <Progress />
       </Layout>
     </ThemeProvider>
