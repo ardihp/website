@@ -5,6 +5,7 @@ import social from "@/data/social";
 import { motion } from "framer-motion";
 
 About.title = "About - Ardi";
+About.route = "about";
 
 function About() {
   return (
@@ -12,6 +13,7 @@ function About() {
       <motion.p
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
+        exit={{ y: 20, opacity: 0 }}
         transition={{ duration: 0.4 }}
         className="font-fredoka text-4xl lg:text-5xl sm:w-2/3 md:w-7/12 dark:text-slate-200 text-sky-500/50"
       >
@@ -22,6 +24,7 @@ function About() {
         <motion.p
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 20, opacity: 0 }}
           transition={{ duration: 0.3, delay: 0.15 }}
           className="font-fredoka text-xl md:text-2xl dark:text-slate-200 text-sky-500/50"
         >
@@ -32,6 +35,7 @@ function About() {
             <motion.p
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 20, opacity: 0 }}
               transition={{ duration: 0.3, delay: 0.3 }}
             >
               My name is{" "}
@@ -67,6 +71,7 @@ function About() {
             <motion.p
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 20, opacity: 0 }}
               transition={{ duration: 0.3, delay: 0.45 }}
             >
               I like things related to{" "}
@@ -105,12 +110,17 @@ function About() {
             <motion.p
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 20, opacity: 0 }}
               transition={{ duration: 0.3, delay: 0.6 }}
               className="font-manrope font-bold dark:text-slate-200 text-gray-600/70"
             >
               Feel free to get in touch with me via links below:
             </motion.p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-flow-col md:auto-cols-fr gap-4 w-full">
+            <motion.div
+              exit={{ y: 20, opacity: 0 }}
+              transition={{ duration: 0.3, delay: 0.75 }}
+              className="grid grid-cols-2 sm:grid-cols-3 md:grid-flow-col md:auto-cols-fr gap-4 w-full"
+            >
               {social.map((scl, i) => (
                 <SocialLink
                   icon={scl.icon}
@@ -120,7 +130,7 @@ function About() {
                   key={i}
                 />
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
