@@ -8,15 +8,23 @@ import { MDXRemote } from "next-mdx-remote";
 import { H2, Images, Paragraph } from "@/components/MDXComponent";
 import { motion } from "framer-motion";
 
+BlogPage.route = "slug";
+
 function BlogPage({ body: { title, date, excerpt }, mdxSource }) {
   return (
-    <div className="flex space-x-8 pt-8 pb-6 w-full">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.3 }}
+      className="flex space-x-8 pt-8 pb-6 w-full"
+    >
       <Head>
         <title>{title} - Blog&apos;s Ardi</title>
       </Head>
       <div className="flex flex-col space-y-4 w-full lg:w-9/12">
         <motion.div
           animate={{ opacity: [0, 1], y: [20, 0] }}
+          exit={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.3 }}
         >
           <div className="inline-flex dark:bg-slate-700/60 bg-sky-500/50 h-8 px-4 rounded-full items-center">
@@ -26,6 +34,7 @@ function BlogPage({ body: { title, date, excerpt }, mdxSource }) {
         <div className="flex flex-col space-y-2">
           <motion.p
             animate={{ opacity: [0, 1], y: [20, 0] }}
+            exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.3, delay: 0.15 }}
             className="font-fredoka text-4xl lg:text-5xl dark:text-slate-200 text-sky-500/50"
           >
@@ -33,6 +42,7 @@ function BlogPage({ body: { title, date, excerpt }, mdxSource }) {
           </motion.p>
           <motion.p
             animate={{ opacity: [0, 1], y: [20, 0] }}
+            exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.3, delay: 0.3 }}
             className="font-manrope font-bold dark:text-slate-400 text-gray-600/70"
           >
@@ -41,6 +51,7 @@ function BlogPage({ body: { title, date, excerpt }, mdxSource }) {
         </div>
         <motion.div
           animate={{ opacity: [0, 1], y: [20, 0] }}
+          exit={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.3, delay: 0.45 }}
           className="prose prose-hr:mb-6 prose-hr:mt-0 prose-zinc dark:prose-invert max-w-none"
         >
@@ -52,6 +63,7 @@ function BlogPage({ body: { title, date, excerpt }, mdxSource }) {
       </div>
       <motion.div
         animate={{ opacity: [0, 1], y: [-50, 0] }}
+        exit={{ opacity: 0, y: -50 }}
         transition={{ duration: 0.6 }}
         className="hidden lg:block lg:w-3/12 relative pl-10"
       >
@@ -66,7 +78,7 @@ function BlogPage({ body: { title, date, excerpt }, mdxSource }) {
           </div>
         </div>
       </motion.div>
-    </div>
+    </motion.div>
   );
 }
 
