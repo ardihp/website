@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 Index.title = "Ardi's Personal Website";
+Index.route = "index";
 
 function Index() {
   return (
@@ -14,6 +15,7 @@ function Index() {
           <motion.p
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 20, opacity: 0 }}
             transition={{ duration: 0.3 }}
             className="font-fredoka text-4xl sm:text-5xl dark:text-white text-sky-500/50"
           >
@@ -26,6 +28,7 @@ function Index() {
           <motion.p
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 20, opacity: 0 }}
             transition={{ duration: 0.3, delay: 0.15 }}
             className="font-manrope font-bold text-lg dark:text-slate-400 text-gray-600/80 text-center lg:text-left w-72 sm:w-96"
           >
@@ -36,6 +39,7 @@ function Index() {
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 20, opacity: 0 }}
           transition={{ duration: 0.3, delay: 0.3 }}
         >
           <Link href="/projects">
@@ -51,8 +55,9 @@ function Index() {
         title="me lazy asf :)"
       >
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ x: 20, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: 20, opacity: 0 }}
           transition={{ duration: 1 }}
           className="w-full"
         >
