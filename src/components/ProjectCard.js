@@ -9,6 +9,7 @@ function ProjectCard({ title, description, image, url, source, stack, idx }) {
     <motion.div
       initial={{ y: 20, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
+      exit={{ y: 20, opacity: 0 }}
       transition={{ duration: 0.3, delay: 0.3 + 0.1 * idx }}
       viewport={{ once: true }}
       className="overflow-hidden border-2 border-dashed dark:border-sky-400/40 border-gray-300/60 rounded-2xl backdrop-blur-xs"

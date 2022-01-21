@@ -4,6 +4,7 @@ import ProjectCard from "@/components/ProjectCard";
 import { motion } from "framer-motion";
 
 Projects.title = "Project's - Ardi";
+Projects.route = "projects";
 
 function Projects() {
   return (
@@ -12,6 +13,7 @@ function Projects() {
         <motion.p
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 20, opacity: 0 }}
           transition={{ duration: 0.3 }}
           className="font-fredoka text-4xl lg:text-5xl dark:text-white text-sky-500/50"
         >
@@ -20,6 +22,7 @@ function Projects() {
         <motion.p
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 20, opacity: 0 }}
           transition={{ duration: 0.3, delay: 0.15 }}
           className="font-manrope font-bold dark:text-slate-400 text-gray-600/70"
         >
