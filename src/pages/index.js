@@ -30,7 +30,7 @@ function Index() {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 20, opacity: 0 }}
             transition={{ duration: 0.3, delay: 0.15 }}
-            className="font-manrope font-bold text-lg dark:text-slate-400 text-gray-600/80 text-center lg:text-left w-72 sm:w-96"
+            className="font-manrope font-bold sm:text-lg dark:text-slate-400 text-gray-600/80 text-center lg:text-left w-72 sm:w-96"
           >
             On my way to becoming a software engineer specialized in frontend
             development.
