@@ -33,6 +33,9 @@ function BlogCard({ slug, body, idx }) {
                   width="712"
                   height="360"
                   layout="responsive"
+                  placeholder="blur"
+                  blurDataURL={image}
+                  priority
                 />
               </div>
             </div>
