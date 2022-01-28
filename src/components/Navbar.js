@@ -9,7 +9,7 @@ function Header() {
   return (
     <div className="flex max-w-5xl mx-auto justify-between items-center py-4 px-6 duration-300">
       <Link href="/" passHref>
-        <div className="flex w-28 items-center dark:text-white text-sky-500/50 cursor-pointer hover:animate-pulse">
+        <div className="flex items-center dark:text-white text-sky-500/50 cursor-pointer hover:animate-pulse">
           <p className="font-korean text-4xl font-bold">아르디</p>
         </div>
       </Link>
