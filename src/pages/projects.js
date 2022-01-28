@@ -1,7 +1,9 @@
 import React from "react";
-import projects from "@/data/projects";
-import ProjectCard from "@/components/ProjectCard";
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
+import projects from "@/data/projects";
+
+const ProjectCard = dynamic(() => import("@/components/ProjectCard"));
 
 Projects.title = "Project's - Ardi";
 Projects.route = "projects";

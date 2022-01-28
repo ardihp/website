@@ -1,15 +1,17 @@
 import React from "react";
-import LinkHref from "@/components/LinkHref";
-import SocialLink from "@/components/SocialLink";
-import social from "@/data/social";
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
+import social from "@/data/social";
+
+const LinkHref = dynamic(() => import("@/components/LinkHref"));
+const SocialLink = dynamic(() => import("@/components/SocialLink"));
 
 About.title = "About - Ardi";
 About.route = "about";
 
 function About() {
   return (
-    <div className="flex flex-col py-6 space-y-6 lg:space-y-8 w-full">
+    <div className="flex flex-col justify-center py-6 space-y-6 lg:space-y-8 w-full">
       <motion.p
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

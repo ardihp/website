@@ -1,7 +1,9 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import { getBlog } from "@/lib/getBlog";
-import BlogCard from "@/components/BlogCard";
 import { motion } from "framer-motion";
+
+const BlogCard = dynamic(() => import("@/components/BlogCard"));
 
 Blog.title = "Blog's - Ardi";
 Blog.route = "blog";

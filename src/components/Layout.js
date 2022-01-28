@@ -1,7 +1,9 @@
 import React from "react";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import BackgroundGrid from "./BackgroundGrid";
+import dynamic from "next/dynamic";
+
+const Footer = dynamic(() => import("@/components/Footer"));
+const Navbar = dynamic(() => import("@/components/Navbar"));
+const BackgroundGrid = dynamic(() => import("./BackgroundGrid"));
 
 function Layout({ children }) {
   return (
