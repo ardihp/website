@@ -66,6 +66,7 @@ function Index() {
             alt="gambar index"
             layout="responsive"
             placeholder="blur"
+            priority
           />
         </motion.div>
       </div>
