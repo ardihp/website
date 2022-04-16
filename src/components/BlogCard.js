@@ -3,20 +3,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-function BlogCard({ slug, body, idx }) {
+function BlogCard({ slug, body }) {
   const { title, date, image, excerpt } = body;
 
   return (
-    <motion.div
-      initial={{ y: 20, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      exit={{ y: 20, opacity: 0 }}
-      transition={{ duration: 0.3, delay: 0.3 + 0.15 * idx }}
-      viewport={{ once: true }}
-      className="flex"
-    >
-      <Link href={`/blog/` + slug}>
-        <a className="w-full transform duration-300 border-2 border-dashed dark:border-sky-400/40 border-gray-300/60 overflow-hidden rounded-2xl hover:-translate-y-1 active:translate-y-0 active:scale-95">
+    <div className="flex">
+      <Link href={`/blog/` + slug} passHref>
+        <motion.a
+          whileHover={{ y: -10 }}
+          whileTap={{ y: 0, scale: 0.95 }}
+          transition={{ duration: 0.05 }}
+          className="w-full transform duration-300 border-2 border-dashed dark:border-sky-400/40 border-gray-300/60 overflow-hidden rounded-2xl"
+        >
           <div className="flex flex-col h-full p-4 dark:bg-sky-500/5 bg-white/10">
             <div className="flex rounded-lg overflow-hidden relative mb-3">
               <div className="absolute top-2 left-2 z-10">
@@ -46,9 +44,9 @@ function BlogCard({ slug, body, idx }) {
               {excerpt}
             </p>
           </div>
-        </a>
+        </motion.a>
       </Link>
-    </motion.div>
+    </div>
   );
 }
 
