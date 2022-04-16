@@ -10,33 +10,27 @@ Blog.route = "blog";
 
 function Blog({ posts }) {
   return (
-    <div className="flex flex-col py-6 space-y-6 w-full">
+    <motion.div
+      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 20 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.15 }}
+      className="flex flex-col pt-8 pb-4 space-y-6 w-full"
+    >
       <div className="flex flex-col space-y-2">
-        <motion.p
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 20, opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          className="font-fredoka text-4xl lg:text-5xl dark:text-white text-sky-500/50"
-        >
+        <p className="font-fredoka text-4xl lg:text-5xl dark:text-white text-sky-500/50">
           Blogs
-        </motion.p>
-        <motion.p
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 20, opacity: 0 }}
-          transition={{ duration: 0.3, delay: 0.15 }}
-          className="font-manrope font-bold dark:text-slate-400 text-gray-600/70"
-        >
+        </p>
+        <p className="font-manrope font-bold dark:text-slate-400 text-gray-600/70">
           Place for me to share something using words.
-        </motion.p>
+        </p>
       </div>
       <div className="grid md:grid-cols-2 gap-6">
         {posts.map((blog, i) => (
-          <BlogCard key={i} idx={i} {...blog} />
+          <BlogCard key={i} {...blog} />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
