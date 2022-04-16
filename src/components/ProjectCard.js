@@ -2,18 +2,10 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Tooltip from "./Tooltip";
-import { motion } from "framer-motion";
 
-function ProjectCard({ title, description, image, url, source, stack, idx }) {
+function ProjectCard({ title, description, image, url, source, stack }) {
   return (
-    <motion.div
-      initial={{ y: 20, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      exit={{ y: 20, opacity: 0 }}
-      transition={{ duration: 0.3, delay: 0.3 + 0.1 * idx }}
-      viewport={{ once: true }}
-      className="overflow-hidden border-2 border-dashed dark:border-sky-400/40 border-gray-300/60 rounded-2xl backdrop-blur-xs"
-    >
+    <div className="overflow-hidden border-2 border-dashed dark:border-sky-400/40 border-gray-300/60 rounded-2xl backdrop-blur-xs">
       <div className="flex flex-col h-full p-4 dark:bg-sky-500/5 bg-white/10">
         <div className="flex bg-gray-50 rounded-lg overflow-hidden mb-3">
           <div className="w-full">
@@ -63,7 +55,7 @@ function ProjectCard({ title, description, image, url, source, stack, idx }) {
           ))}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
