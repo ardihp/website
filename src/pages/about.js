@@ -11,35 +11,24 @@ About.route = "about";
 
 function About() {
   return (
-    <div className="flex flex-col justify-center py-6 space-y-6 lg:space-y-8 w-full">
-      <motion.p
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        exit={{ y: 20, opacity: 0 }}
-        transition={{ duration: 0.4 }}
-        className="font-fredoka text-4xl lg:text-5xl sm:w-2/3 md:w-7/12 dark:text-slate-200 text-sky-500/50"
-      >
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.15 }}
+      className="flex flex-col justify-center py-6 space-y-6 lg:space-y-8 w-full"
+    >
+      <p className="font-fredoka text-4xl lg:text-5xl sm:w-2/3 md:w-7/12 dark:text-slate-200 text-sky-500/50">
         Hey, it&apos;s a nice to meet you here {""}
         <span className="font-normal">⛄️</span>
-      </motion.p>
+      </p>
       <div className="flex flex-col space-y-3">
-        <motion.p
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 20, opacity: 0 }}
-          transition={{ duration: 0.3, delay: 0.15 }}
-          className="font-fredoka text-xl md:text-2xl dark:text-slate-200 text-sky-500/50"
-        >
+        <p className="font-fredoka text-xl md:text-2xl dark:text-slate-200 text-sky-500/50">
           About Me
-        </motion.p>
+        </p>
         <div className="flex flex-col space-y-6">
           <div className="font-manrope font-bold dark:text-slate-400 text-gray-600/70 space-y-3 leading-loose">
-            <motion.p
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: 20, opacity: 0 }}
-              transition={{ duration: 0.3, delay: 0.3 }}
-            >
+            <p>
               My name is{" "}
               <span className="dark:text-slate-200 text-gray-800">
                 Ardiansyah Halim Putra
@@ -69,13 +58,8 @@ function About() {
                 Software Engineering
               </span>{" "}
               last year, 2021.
-            </motion.p>
-            <motion.p
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: 20, opacity: 0 }}
-              transition={{ duration: 0.3, delay: 0.45 }}
-            >
+            </p>
+            <p>
               I like things related to{" "}
               <span className="dark:text-slate-200 text-gray-800">
                 design and technology
@@ -84,10 +68,10 @@ function About() {
               <span className="dark:text-slate-200 text-gray-800">
                 interaction design, accessibility, and technology design
               </span>
-              . I started learning web development since 1st year at school
-              using{" "}
+              . I&apos;m getting interested in web development since 1st year at
+              Vocational High School when i first learn{" "}
               <LinkHref body="PHP" href="https://www.php.net" target="_blank" />
-              , then continue with PHP framework called{" "}
+              , and then continue with PHP framework called{" "}
               <LinkHref
                 body="Laravel"
                 href="https://laravel.com"
@@ -106,23 +90,13 @@ function About() {
                 target="_blank"
               />
               .
-            </motion.p>
+            </p>
           </div>
           <div className="flex flex-col space-y-4">
-            <motion.p
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: 20, opacity: 0 }}
-              transition={{ duration: 0.3, delay: 0.6 }}
-              className="font-manrope font-bold dark:text-slate-200 text-gray-600/70"
-            >
+            <p className="font-manrope font-bold dark:text-slate-200 text-gray-600/70">
               Feel free to get in touch with me via links below:
-            </motion.p>
-            <motion.div
-              exit={{ y: 20, opacity: 0 }}
-              transition={{ duration: 0.3, delay: 0.75 }}
-              className="grid grid-cols-2 sm:grid-cols-3 md:grid-flow-col md:auto-cols-fr gap-4 w-full"
-            >
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-flow-col md:auto-cols-fr gap-4 w-full">
               {social.map((scl, i) => (
                 <SocialLink
                   icon={scl.icon}
@@ -132,11 +106,11 @@ function About() {
                   key={i}
                 />
               ))}
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
