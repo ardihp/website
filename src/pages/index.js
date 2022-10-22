@@ -29,7 +29,7 @@ function Index() {
               className="fas fa-paw ml-4"
             />
           </p>
-          <p className="font-manrope font-bold sm:text-lg dark:text-slate-400 text-gray-600/80 text-center lg:text-left w-72 sm:w-96">
+          <p className="font-manrope font-bold sm:text-lg dark:text-slate-300 text-gray-600/80 text-center lg:text-left w-72 sm:w-96">
             On my way to becoming a software engineer specialized in frontend
             development.
           </p>
@@ -57,7 +57,6 @@ function Index() {
             src={IndexPict}
             alt="gambar index"
             layout="responsive"
-            placeholder="blur"
             priority
           />
         </motion.div>

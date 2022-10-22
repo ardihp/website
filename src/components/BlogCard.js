@@ -10,7 +10,7 @@ function BlogCard({ slug, body }) {
     <div className="flex">
       <Link href={`/blog/` + slug} passHref>
         <motion.a
-          whileHover={{ y: -10 }}
+          whileHover={{ y: -5 }}
           whileTap={{ y: 0, scale: 0.95 }}
           transition={{ duration: 0.05 }}
           className="w-full transform duration-300 border-2 border-dashed dark:border-sky-400/40 border-gray-300/60 overflow-hidden rounded-2xl"
@@ -31,16 +31,14 @@ function BlogCard({ slug, body }) {
                   width="712"
                   height="360"
                   layout="responsive"
-                  placeholder="blur"
-                  blurDataURL={image}
                   priority
                 />
               </div>
             </div>
-            <p className="font-fredoka text-xl hover:underline underline-offset-1 dark:text-slate-200 text-gray-600/60">
+            <p className="font-fredoka text-xl hover:underline underline-offset-1 dark:text-slate-100 text-gray-600/80">
               {title}
             </p>
-            <p className="font-manrope dark:text-slate-400 text-gray-600/60 font-bold text-sm mb-auto mt-1">
+            <p className="font-manrope dark:text-slate-300 text-gray-600/60 font-bold text-sm mb-auto mt-1">
               {excerpt}
             </p>
           </div>
