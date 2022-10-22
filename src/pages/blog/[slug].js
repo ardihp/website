@@ -28,10 +28,10 @@ function BlogPage({ body: { title, date, excerpt }, mdxSource }) {
           </div>
         </div>
         <div className="flex flex-col space-y-2">
-          <p className="font-fredoka text-4xl lg:text-5xl dark:text-slate-200 text-sky-500/50">
+          <p className="font-fredoka text-4xl lg:text-5xl dark:text-slate-100 text-sky-500/50">
             {title}
           </p>
-          <p className="font-manrope font-bold dark:text-slate-400 text-gray-600/70">
+          <p className="font-manrope font-bold dark:text-slate-300 text-gray-600/70">
             {excerpt}
           </p>
         </div>

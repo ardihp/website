@@ -11,7 +11,7 @@ function Page404() {
   return (
     <div className="flex flex-col lg:flex-row-reverse space-y-10 lg:space-y-0 py-6 w-full justify-center items-center">
       <div className="flex flex-col items-center lg:items-start space-y-8 lg:w-3/4">
-        <div className="flex flex-col items-center lg:items-start w-full font-fredoka space-y-1 text-4xl md:text-5xl dark:text-slate-200 text-sky-500/50">
+        <div className="flex flex-col items-center lg:items-start w-full font-fredoka space-y-1 text-4xl md:text-5xl dark:text-slate-100 text-sky-500/50">
           <motion.div
             animate={{ opacity: [0, 1], y: [20, 0] }}
             exit={{ opacity: 0, y: 20 }}

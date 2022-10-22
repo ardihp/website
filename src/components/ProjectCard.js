@@ -12,33 +12,33 @@ function ProjectCard({ title, description, image, url, source, stack }) {
             <Image
               src={image}
               alt={title}
-              placeholder="blur"
               layout="responsive"
               width="712"
               height="360"
+              priority
             />
           </div>
         </div>
-        <div className="flex items-center justify-between dark:text-slate-200 text-gray-600/60 mb-1">
+        <div className="flex items-center justify-between dark:text-slate-100 text-gray-600/80 mb-1">
           <p className="font-fredoka text-xl">{title}</p>
           <div className="flex space-x-4">
             <Link href={url}>
               <a target="_blank" rel="no-prefferer">
                 <Tooltip content="Visit Project">
-                  <i className="fas fa-link text-lg duration-300 dark:hover:text-slate-400 hover:text-gray-800" />
+                  <i className="fas fa-link text-lg duration-300 dark:hover:text-slate-300 hover:text-gray-800" />
                 </Tooltip>
               </a>
             </Link>
             <Link href={source}>
               <a target="_blank" rel="no-prefferer">
                 <Tooltip content="Source Code">
-                  <i className="fab fa-github text-lg duration-300 dark:hover:text-slate-400 hover:text-gray-800" />
+                  <i className="fab fa-github text-lg duration-300 dark:hover:text-slate-300 hover:text-gray-800" />
                 </Tooltip>
               </a>
             </Link>
           </div>
         </div>
-        <p className="font-manrope text-sm font-bold dark:text-slate-400 text-gray-600/60 mb-auto">
+        <p className="font-manrope text-sm font-bold dark:text-slate-300 text-gray-600/60 mb-auto">
           {description}.
         </p>
         <div className="flex space-x-2 mt-3">
