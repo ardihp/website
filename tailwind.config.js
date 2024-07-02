@@ -3,7 +3,7 @@ module.exports = {
   darkMode: "class",
   theme: {
     fontFamily: {
-      fredoka: "Fredoka One, cursive",
+      fredoka: "'Fredoka', sans-serif",
       manrope: "Manrope, sans-serif",
       korean: "Korean",
     },
