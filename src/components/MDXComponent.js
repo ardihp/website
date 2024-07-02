@@ -21,10 +21,11 @@ export const H2 = ({ children }) => {
   const link = `#${anchor}`;
   return (
     <h2 id={anchor} className="flex font-fredoka mt-6 mb-4 scroll-my-24">
-      <Link href={link}>
-        <a className="dark:text-slate-100 text-gray-600/80 no-underline hover:underline underline-offset-1">
-          {children}
-        </a>
+      <Link
+        href={link}
+        className="dark:text-slate-100 text-gray-600/80 no-underline hover:underline underline-offset-1"
+      >
+        {children}
       </Link>
     </h2>
   );

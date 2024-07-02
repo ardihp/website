@@ -22,19 +22,15 @@ function ProjectCard({ title, description, image, url, source, stack }) {
         <div className="flex items-center justify-between dark:text-slate-100 text-gray-600/80 mb-1">
           <p className="font-fredoka text-xl">{title}</p>
           <div className="flex space-x-4">
-            <Link href={url}>
-              <a target="_blank" rel="no-prefferer">
-                <Tooltip content="Visit Project">
-                  <i className="fas fa-link text-lg duration-300 dark:hover:text-slate-300 hover:text-gray-800" />
-                </Tooltip>
-              </a>
+            <Link href={url} target="_blank" passHref>
+              <Tooltip content="Visit Project">
+                <i className="fas fa-link text-lg duration-300 dark:hover:text-slate-300 hover:text-gray-800" />
+              </Tooltip>
             </Link>
-            <Link href={source}>
-              <a target="_blank" rel="no-prefferer">
-                <Tooltip content="Source Code">
-                  <i className="fab fa-github text-lg duration-300 dark:hover:text-slate-300 hover:text-gray-800" />
-                </Tooltip>
-              </a>
+            <Link href={source} target="_blank" passHref>
+              <Tooltip content="Source Code">
+                <i className="fab fa-github text-lg duration-300 dark:hover:text-slate-300 hover:text-gray-800" />
+              </Tooltip>
             </Link>
           </div>
         </div>

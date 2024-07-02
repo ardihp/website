@@ -36,11 +36,11 @@ function Page404() {
           exit={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.3, delay: 0.3 }}
         >
-          <Link href="/">
-            <a className="flex dark:bg-sky-500 dark:hover:bg-sky-400 bg-slate-400/70 hover:bg-slate-400/50 h-10 px-6 shadow-lg dark:shadow-sky-500/25 rounded-lg space-x-2 items-center text-white duration-300">
+          <Link href="/" passHref>
+            <div className="flex dark:bg-sky-500 dark:hover:bg-sky-400 bg-slate-400/70 hover:bg-slate-400/50 h-10 px-6 shadow-lg dark:shadow-sky-500/25 rounded-lg space-x-2 items-center text-white duration-300">
               <p className="font-manrope font-bold text-sm">Go back to Home</p>
               <i className="fas fa-angle-right" />
-            </a>
+            </div>
           </Link>
         </motion.div>
       </div>

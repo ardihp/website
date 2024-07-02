@@ -9,7 +9,7 @@ function BlogCard({ slug, body }) {
   return (
     <div className="flex">
       <Link href={`/blog/` + slug} passHref>
-        <motion.a
+        <motion.div
           whileHover={{ y: -5 }}
           whileTap={{ y: 0, scale: 0.95 }}
           transition={{ duration: 0.05 }}
@@ -42,7 +42,7 @@ function BlogCard({ slug, body }) {
               {excerpt}
             </p>
           </div>
-        </motion.a>
+        </motion.div>
       </Link>
     </div>
   );
