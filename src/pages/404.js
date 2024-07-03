@@ -16,7 +16,7 @@ function Page404() {
             animate={{ opacity: [0, 1], y: [20, 0] }}
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.3 }}
-            className="flex items-center space-x-4"
+            className="flex items-center space-x-4 font-semibold"
           >
             <p>There&apos;s</p>
             <p className="dark:bg-slate-700/60 bg-sky-500/50 rounded-md text-white mr-2 px-2 py-2 tracking-wider">
@@ -27,6 +27,7 @@ function Page404() {
             animate={{ opacity: [0, 1], y: [20, 0] }}
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.3, delay: 0.15 }}
+            className="font-semibold"
           >
             You Can See Here!
           </motion.p>
@@ -51,12 +52,7 @@ function Page404() {
           transition={{ duration: 0.6 }}
           className="w-72 lg:w-full"
         >
-          <Image
-            src={Image404}
-            alt="gambar index"
-            layout="responsive"
-            placeholder="blur"
-          />
+          <Image src={Image404} alt="gambar index" placeholder="blur" />
         </motion.div>
       </div>
     </div>

@@ -18,7 +18,7 @@ function Blog({ posts }) {
       className="flex flex-col pt-8 pb-4 space-y-6 w-full"
     >
       <div className="flex flex-col space-y-2">
-        <p className="font-fredoka text-4xl lg:text-5xl dark:text-white text-sky-500/50">
+        <p className="font-fredoka font-medium text-4xl lg:text-5xl dark:text-white text-sky-500/50">
           Blogs
         </p>
         <p className="font-manrope font-bold dark:text-slate-300 text-gray-600/70">

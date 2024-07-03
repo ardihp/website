@@ -23,7 +23,7 @@ export const H2 = ({ children }) => {
     <h2 id={anchor} className="flex font-fredoka mt-6 mb-4 scroll-my-24">
       <Link
         href={link}
-        className="dark:text-slate-100 text-gray-600/80 no-underline hover:underline underline-offset-1"
+        className="dark:text-slate-100 text-gray-600/80 no-underline hover:underline underline-offset-1 font-semibold"
       >
         {children}
       </Link>

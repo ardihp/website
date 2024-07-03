@@ -18,12 +18,12 @@ function About() {
       transition={{ duration: 0.15 }}
       className="flex flex-col justify-center py-6 space-y-6 lg:space-y-8 w-full"
     >
-      <p className="font-fredoka text-4xl lg:text-5xl sm:w-2/3 md:w-7/12 dark:text-slate-100 text-sky-500/50">
+      <p className="font-fredoka font-medium text-4xl lg:text-5xl sm:w-2/3 md:w-7/12 dark:text-slate-100 text-sky-500/50">
         Hey, it&apos;s a nice to meet you here {""}
         <span className="font-normal">⛄️</span>
       </p>
       <div className="flex flex-col space-y-3">
-        <p className="font-fredoka text-xl md:text-2xl dark:text-slate-100 text-sky-500/50">
+        <p className="font-fredoka font-medium text-xl md:text-2xl dark:text-slate-100 text-sky-500/50">
           About Me
         </p>
         <div className="flex flex-col space-y-6">

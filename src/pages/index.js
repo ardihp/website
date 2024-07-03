@@ -18,7 +18,7 @@ function Index() {
     >
       <div className="flex flex-col items-center lg:items-start space-y-8 md:w-full duration-300">
         <div className="flex flex-col items-center lg:items-start space-y-3 w-full">
-          <p className="font-fredoka text-4xl sm:text-5xl dark:text-white text-sky-500/50">
+          <p className="font-fredoka font-semibold text-4xl sm:text-5xl dark:text-white text-sky-500/50">
             <span className="dark:bg-slate-700/60 bg-sky-500/50 rounded-lg text-white mr-2 px-2 tracking-wider">
               Hai
             </span>
@@ -53,12 +53,7 @@ function Index() {
           transition={{ duration: 0.1 }}
           className="w-full"
         >
-          <Image
-            src={IndexPict}
-            alt="gambar index"
-            layout="responsive"
-            priority
-          />
+          <Image src={IndexPict} alt="gambar index" priority />
         </motion.div>
       </div>
     </motion.div>

@@ -24,18 +24,18 @@ function BlogCard({ slug, body }) {
                   </p>
                 </div>
               </div>
-              <div className="w-full">
-                <Image
-                  src={image}
-                  alt={title}
-                  width="712"
-                  height="360"
-                  layout="responsive"
-                  priority
-                />
+              <div className="w-full h-auto">
+                <div className="relative w-full max-w-[712px] h-[230px]">
+                  <Image
+                    src={image}
+                    alt={title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
               </div>
             </div>
-            <p className="font-fredoka text-xl hover:underline underline-offset-1 dark:text-slate-100 text-gray-600/80">
+            <p className="font-fredoka font-semibold text-xl hover:underline underline-offset-1 dark:text-slate-100 text-gray-600/80">
               {title}
             </p>
             <p className="font-manrope dark:text-slate-300 text-gray-600/60 font-bold text-sm mb-auto mt-1">
