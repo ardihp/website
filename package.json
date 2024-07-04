@@ -37,5 +37,6 @@
       "yarn eslint",
       "yarn prettier --write"
     ]
-  }
+  },
+  "homepage": "/v1"
 }
