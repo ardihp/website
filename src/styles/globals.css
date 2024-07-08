@@ -16,10 +16,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
-
 #nprogress .bar {
   background: #58c5f0;
   box-shadow: 5px 5px 25px #4cc4f3;
