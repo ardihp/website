@@ -43,7 +43,7 @@ function Header() {
                 <ListboxOption
                   key={key}
                   value={item}
-                  className="group flex items-center justify-between gap-2 rounded-lg py-1.5 px-2 select-none dark:data-[focus]:bg-slate-200/10 data-[focus]:bg-slate-400/20"
+                  className="group flex items-center justify-between gap-2 rounded-lg py-1.5 px-2 select-none dark:data-[focus]:bg-slate-200/10 data-[focus]:bg-slate-400/20 cursor-pointer"
                 >
                   <i className="fa fa-check text-[10px] stroke-0 invisible group-data-[selected]:visible group-data-[selected]:dark:text-sky-400 group-data-[selected]:text-gray-400" />
                   <p className="font-fredoka font-medium text-sm dark:text-white text-gray-400 group-data-[selected]:dark:text-sky-400 group-data-[selected]:text-gray-400">

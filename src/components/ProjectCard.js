@@ -15,7 +15,7 @@ function ProjectCard({ title, description, image, url, source, stack }) {
           </div>
         </div>
         <div className="flex items-center justify-between dark:text-slate-100 text-gray-600/80 mb-1">
-          <p className="font-fredoka text-xl">{title}</p>
+          <p className="font-fredoka font-semibold text-xl">{title}</p>
           <div className="flex space-x-4">
             <Link href={url} target="_blank" passHref>
               <Tooltip content="Visit Project">
